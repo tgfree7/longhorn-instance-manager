@@ -117,9 +117,9 @@ func (s *LogStream) Recv() (string, error) {
 }
 
 type DataIP struct {
-	dataIP string
+	IP string
 }
 
 func RPCToDataIP(obj *rpc.DataIP) *DataIP {
-	return &DataIP{dataIP: obj.DataIP}
+	return &DataIP{IP: obj.DataIP}
 }
