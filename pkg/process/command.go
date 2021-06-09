@@ -1,11 +1,16 @@
 package process
 
 import (
+	"bytes"
+	"fmt"
 	"io"
 	"os/exec"
 	"path/filepath"
+	"strconv"
 	"sync"
 	"syscall"
+
+	"github.com/sirupsen/logrus"
 )
 
 type Executor interface {
@@ -19,6 +24,7 @@ type Command interface {
 	Stop()
 	StopWithSignal(signal syscall.Signal)
 	Kill()
+	UpdateProcess()
 }
 
 type BinaryExecutor struct{}
@@ -53,6 +59,35 @@ func NewBinaryCommand(binary string, arg ...string) (*BinaryCommand, error) {
 		Cmd:     cmd,
 		RWMutex: &sync.RWMutex{},
 	}, nil
+}
+
+func (bc *BinaryCommand) UpdateProcess() {
+	bc.Lock()
+	defer bc.Unlock()
+	if bc.Process != nil {
+		pid := bc.Process.Pid
+		// _, err := ExecuteWithoutTimeout("chrt", "-r", "-p", "7", strconv.Itoa(pid))
+		_, err := ExecuteWithoutTimeout("renice", "-10", strconv.Itoa(pid))
+		if err != nil {
+			logrus.Debugf("renice pid: %v failed, error:%v", pid, err)
+		} else {
+			logrus.Debugf("renice pid: %v succeed", pid)
+		}
+	}
+}
+
+func ExecuteWithoutTimeout(binary string, args ...string) (string, error) {
+	cmd := exec.Command(binary, args...)
+
+	var output, stderr bytes.Buffer
+	cmd.Stdout = &output
+	cmd.Stderr = &stderr
+
+	if err := cmd.Run(); err != nil {
+		return "", fmt.Errorf("failed to execute: %v %v, output %s, stderr, %s, error %v",
+			binary, args, output.String(), stderr.String(), err)
+	}
+	return output.String(), nil
 }
 
 func (bc *BinaryCommand) SetOutput(writer io.Writer) {
@@ -108,6 +143,9 @@ type MockCommand struct {
 
 	started bool
 	stopped bool
+}
+
+func (mc *MockCommand) UpdateProcess() {
 }
 
 func NewMockCommand(name string, arg ...string) (*MockCommand, error) {

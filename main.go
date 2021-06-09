@@ -43,6 +43,7 @@ func main() {
 	a.Commands = []cli.Command{
 		cmd.StartCmd(),
 		cmd.ProcessCmd(),
+		cmd.GetIP(),
 		VersionCmd(),
 	}
 	if err := a.Run(os.Args); err != nil {

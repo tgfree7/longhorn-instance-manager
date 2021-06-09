@@ -216,3 +216,26 @@ func (cli *ProcessManagerClient) VersionGet() (*meta.VersionOutput, error) {
 		InstanceManagerAPIMinVersion: int(resp.InstanceManagerAPIMinVersion),
 	}, nil
 }
+
+func (cli *ProcessManagerClient) DataIPGet(name string) (*api.DataIP, error) {
+	if name == "" {
+		return nil, fmt.Errorf("failed to call gRPC DataIPGet: missing parameter name")
+	}
+	conn, err := grpc.Dial(cli.Address, grpc.WithInsecure())
+	if err != nil {
+		return nil, fmt.Errorf("cannot connect getDataIP GRPC service to %v: %v", cli.Address, err)
+	}
+	defer conn.Close()
+
+	client := rpc.NewProcessManagerServiceClient(conn)
+	ctx, cancel := context.WithTimeout(context.Background(), types.GRPCServiceTimeout)
+	defer cancel()
+
+	ip, err := client.GetInterfaceIP(ctx, &rpc.Interface{
+		Interface: name,
+	})
+	if err != nil {
+		return nil, fmt.Errorf("failed to call gRPC DataIPGet for interface %v: %v", name, err)
+	}
+	return api.RPCToDataIP(ip), nil
+}

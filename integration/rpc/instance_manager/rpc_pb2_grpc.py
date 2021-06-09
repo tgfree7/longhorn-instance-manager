@@ -6,161 +6,316 @@ import rpc_pb2 as rpc__pb2
 
 
 class ProcessManagerServiceStub(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def __init__(self, channel):
-    """Constructor.
+    def __init__(self, channel):
+        """Constructor.
 
-    Args:
-      channel: A grpc.Channel.
-    """
-    self.ProcessCreate = channel.unary_unary(
-        '/ProcessManagerService/ProcessCreate',
-        request_serializer=rpc__pb2.ProcessCreateRequest.SerializeToString,
-        response_deserializer=rpc__pb2.ProcessResponse.FromString,
-        )
-    self.ProcessDelete = channel.unary_unary(
-        '/ProcessManagerService/ProcessDelete',
-        request_serializer=rpc__pb2.ProcessDeleteRequest.SerializeToString,
-        response_deserializer=rpc__pb2.ProcessResponse.FromString,
-        )
-    self.ProcessGet = channel.unary_unary(
-        '/ProcessManagerService/ProcessGet',
-        request_serializer=rpc__pb2.ProcessGetRequest.SerializeToString,
-        response_deserializer=rpc__pb2.ProcessResponse.FromString,
-        )
-    self.ProcessList = channel.unary_unary(
-        '/ProcessManagerService/ProcessList',
-        request_serializer=rpc__pb2.ProcessListRequest.SerializeToString,
-        response_deserializer=rpc__pb2.ProcessListResponse.FromString,
-        )
-    self.ProcessLog = channel.unary_stream(
-        '/ProcessManagerService/ProcessLog',
-        request_serializer=rpc__pb2.LogRequest.SerializeToString,
-        response_deserializer=rpc__pb2.LogResponse.FromString,
-        )
-    self.ProcessWatch = channel.unary_stream(
-        '/ProcessManagerService/ProcessWatch',
-        request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-        response_deserializer=rpc__pb2.ProcessResponse.FromString,
-        )
-    self.ProcessReplace = channel.unary_unary(
-        '/ProcessManagerService/ProcessReplace',
-        request_serializer=rpc__pb2.ProcessReplaceRequest.SerializeToString,
-        response_deserializer=rpc__pb2.ProcessResponse.FromString,
-        )
-    self.VersionGet = channel.unary_unary(
-        '/ProcessManagerService/VersionGet',
-        request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
-        response_deserializer=rpc__pb2.VersionResponse.FromString,
-        )
+        Args:
+            channel: A grpc.Channel.
+        """
+        self.ProcessCreate = channel.unary_unary(
+                '/ProcessManagerService/ProcessCreate',
+                request_serializer=rpc__pb2.ProcessCreateRequest.SerializeToString,
+                response_deserializer=rpc__pb2.ProcessResponse.FromString,
+                )
+        self.ProcessDelete = channel.unary_unary(
+                '/ProcessManagerService/ProcessDelete',
+                request_serializer=rpc__pb2.ProcessDeleteRequest.SerializeToString,
+                response_deserializer=rpc__pb2.ProcessResponse.FromString,
+                )
+        self.ProcessGet = channel.unary_unary(
+                '/ProcessManagerService/ProcessGet',
+                request_serializer=rpc__pb2.ProcessGetRequest.SerializeToString,
+                response_deserializer=rpc__pb2.ProcessResponse.FromString,
+                )
+        self.ProcessList = channel.unary_unary(
+                '/ProcessManagerService/ProcessList',
+                request_serializer=rpc__pb2.ProcessListRequest.SerializeToString,
+                response_deserializer=rpc__pb2.ProcessListResponse.FromString,
+                )
+        self.ProcessLog = channel.unary_stream(
+                '/ProcessManagerService/ProcessLog',
+                request_serializer=rpc__pb2.LogRequest.SerializeToString,
+                response_deserializer=rpc__pb2.LogResponse.FromString,
+                )
+        self.ProcessWatch = channel.unary_stream(
+                '/ProcessManagerService/ProcessWatch',
+                request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+                response_deserializer=rpc__pb2.ProcessResponse.FromString,
+                )
+        self.ProcessReplace = channel.unary_unary(
+                '/ProcessManagerService/ProcessReplace',
+                request_serializer=rpc__pb2.ProcessReplaceRequest.SerializeToString,
+                response_deserializer=rpc__pb2.ProcessResponse.FromString,
+                )
+        self.GetInterfaceIP = channel.unary_unary(
+                '/ProcessManagerService/GetInterfaceIP',
+                request_serializer=rpc__pb2.Interface.SerializeToString,
+                response_deserializer=rpc__pb2.DataIP.FromString,
+                )
+        self.VersionGet = channel.unary_unary(
+                '/ProcessManagerService/VersionGet',
+                request_serializer=google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+                response_deserializer=rpc__pb2.VersionResponse.FromString,
+                )
 
 
 class ProcessManagerServiceServicer(object):
-  # missing associated documentation comment in .proto file
-  pass
+    """Missing associated documentation comment in .proto file"""
 
-  def ProcessCreate(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def ProcessCreate(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def ProcessDelete(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def ProcessDelete(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def ProcessGet(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def ProcessGet(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def ProcessList(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def ProcessList(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def ProcessLog(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def ProcessLog(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def ProcessWatch(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def ProcessWatch(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def ProcessReplace(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def ProcessReplace(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
-  def VersionGet(self, request, context):
-    # missing associated documentation comment in .proto file
-    pass
-    context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-    context.set_details('Method not implemented!')
-    raise NotImplementedError('Method not implemented!')
+    def GetInterfaceIP(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
+
+    def VersionGet(self, request, context):
+        """Missing associated documentation comment in .proto file"""
+        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
+        context.set_details('Method not implemented!')
+        raise NotImplementedError('Method not implemented!')
 
 
 def add_ProcessManagerServiceServicer_to_server(servicer, server):
-  rpc_method_handlers = {
-      'ProcessCreate': grpc.unary_unary_rpc_method_handler(
-          servicer.ProcessCreate,
-          request_deserializer=rpc__pb2.ProcessCreateRequest.FromString,
-          response_serializer=rpc__pb2.ProcessResponse.SerializeToString,
-      ),
-      'ProcessDelete': grpc.unary_unary_rpc_method_handler(
-          servicer.ProcessDelete,
-          request_deserializer=rpc__pb2.ProcessDeleteRequest.FromString,
-          response_serializer=rpc__pb2.ProcessResponse.SerializeToString,
-      ),
-      'ProcessGet': grpc.unary_unary_rpc_method_handler(
-          servicer.ProcessGet,
-          request_deserializer=rpc__pb2.ProcessGetRequest.FromString,
-          response_serializer=rpc__pb2.ProcessResponse.SerializeToString,
-      ),
-      'ProcessList': grpc.unary_unary_rpc_method_handler(
-          servicer.ProcessList,
-          request_deserializer=rpc__pb2.ProcessListRequest.FromString,
-          response_serializer=rpc__pb2.ProcessListResponse.SerializeToString,
-      ),
-      'ProcessLog': grpc.unary_stream_rpc_method_handler(
-          servicer.ProcessLog,
-          request_deserializer=rpc__pb2.LogRequest.FromString,
-          response_serializer=rpc__pb2.LogResponse.SerializeToString,
-      ),
-      'ProcessWatch': grpc.unary_stream_rpc_method_handler(
-          servicer.ProcessWatch,
-          request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-          response_serializer=rpc__pb2.ProcessResponse.SerializeToString,
-      ),
-      'ProcessReplace': grpc.unary_unary_rpc_method_handler(
-          servicer.ProcessReplace,
-          request_deserializer=rpc__pb2.ProcessReplaceRequest.FromString,
-          response_serializer=rpc__pb2.ProcessResponse.SerializeToString,
-      ),
-      'VersionGet': grpc.unary_unary_rpc_method_handler(
-          servicer.VersionGet,
-          request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
-          response_serializer=rpc__pb2.VersionResponse.SerializeToString,
-      ),
-  }
-  generic_handler = grpc.method_handlers_generic_handler(
-      'ProcessManagerService', rpc_method_handlers)
-  server.add_generic_rpc_handlers((generic_handler,))
+    rpc_method_handlers = {
+            'ProcessCreate': grpc.unary_unary_rpc_method_handler(
+                    servicer.ProcessCreate,
+                    request_deserializer=rpc__pb2.ProcessCreateRequest.FromString,
+                    response_serializer=rpc__pb2.ProcessResponse.SerializeToString,
+            ),
+            'ProcessDelete': grpc.unary_unary_rpc_method_handler(
+                    servicer.ProcessDelete,
+                    request_deserializer=rpc__pb2.ProcessDeleteRequest.FromString,
+                    response_serializer=rpc__pb2.ProcessResponse.SerializeToString,
+            ),
+            'ProcessGet': grpc.unary_unary_rpc_method_handler(
+                    servicer.ProcessGet,
+                    request_deserializer=rpc__pb2.ProcessGetRequest.FromString,
+                    response_serializer=rpc__pb2.ProcessResponse.SerializeToString,
+            ),
+            'ProcessList': grpc.unary_unary_rpc_method_handler(
+                    servicer.ProcessList,
+                    request_deserializer=rpc__pb2.ProcessListRequest.FromString,
+                    response_serializer=rpc__pb2.ProcessListResponse.SerializeToString,
+            ),
+            'ProcessLog': grpc.unary_stream_rpc_method_handler(
+                    servicer.ProcessLog,
+                    request_deserializer=rpc__pb2.LogRequest.FromString,
+                    response_serializer=rpc__pb2.LogResponse.SerializeToString,
+            ),
+            'ProcessWatch': grpc.unary_stream_rpc_method_handler(
+                    servicer.ProcessWatch,
+                    request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                    response_serializer=rpc__pb2.ProcessResponse.SerializeToString,
+            ),
+            'ProcessReplace': grpc.unary_unary_rpc_method_handler(
+                    servicer.ProcessReplace,
+                    request_deserializer=rpc__pb2.ProcessReplaceRequest.FromString,
+                    response_serializer=rpc__pb2.ProcessResponse.SerializeToString,
+            ),
+            'GetInterfaceIP': grpc.unary_unary_rpc_method_handler(
+                    servicer.GetInterfaceIP,
+                    request_deserializer=rpc__pb2.Interface.FromString,
+                    response_serializer=rpc__pb2.DataIP.SerializeToString,
+            ),
+            'VersionGet': grpc.unary_unary_rpc_method_handler(
+                    servicer.VersionGet,
+                    request_deserializer=google_dot_protobuf_dot_empty__pb2.Empty.FromString,
+                    response_serializer=rpc__pb2.VersionResponse.SerializeToString,
+            ),
+    }
+    generic_handler = grpc.method_handlers_generic_handler(
+            'ProcessManagerService', rpc_method_handlers)
+    server.add_generic_rpc_handlers((generic_handler,))
+
+
+ # This class is part of an EXPERIMENTAL API.
+class ProcessManagerService(object):
+    """Missing associated documentation comment in .proto file"""
+
+    @staticmethod
+    def ProcessCreate(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ProcessManagerService/ProcessCreate',
+            rpc__pb2.ProcessCreateRequest.SerializeToString,
+            rpc__pb2.ProcessResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def ProcessDelete(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ProcessManagerService/ProcessDelete',
+            rpc__pb2.ProcessDeleteRequest.SerializeToString,
+            rpc__pb2.ProcessResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def ProcessGet(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ProcessManagerService/ProcessGet',
+            rpc__pb2.ProcessGetRequest.SerializeToString,
+            rpc__pb2.ProcessResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def ProcessList(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ProcessManagerService/ProcessList',
+            rpc__pb2.ProcessListRequest.SerializeToString,
+            rpc__pb2.ProcessListResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def ProcessLog(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(request, target, '/ProcessManagerService/ProcessLog',
+            rpc__pb2.LogRequest.SerializeToString,
+            rpc__pb2.LogResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def ProcessWatch(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_stream(request, target, '/ProcessManagerService/ProcessWatch',
+            google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            rpc__pb2.ProcessResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def ProcessReplace(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ProcessManagerService/ProcessReplace',
+            rpc__pb2.ProcessReplaceRequest.SerializeToString,
+            rpc__pb2.ProcessResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def GetInterfaceIP(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ProcessManagerService/GetInterfaceIP',
+            rpc__pb2.Interface.SerializeToString,
+            rpc__pb2.DataIP.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)
+
+    @staticmethod
+    def VersionGet(request,
+            target,
+            options=(),
+            channel_credentials=None,
+            call_credentials=None,
+            compression=None,
+            wait_for_ready=None,
+            timeout=None,
+            metadata=None):
+        return grpc.experimental.unary_unary(request, target, '/ProcessManagerService/VersionGet',
+            google_dot_protobuf_dot_empty__pb2.Empty.SerializeToString,
+            rpc__pb2.VersionResponse.FromString,
+            options, channel_credentials,
+            call_credentials, compression, wait_for_ready, timeout, metadata)

@@ -35,7 +35,7 @@ func StartCmd() cli.Command {
 			},
 			cli.StringFlag{
 				Name:  "port-range",
-				Value: "10000-30000",
+				Value: "10000-20000",
 			},
 		},
 		Action: func(c *cli.Context) {

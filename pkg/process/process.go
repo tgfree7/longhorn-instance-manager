@@ -90,10 +90,13 @@ func (p *Process) Start() (err error) {
 
 	go func() {
 		if p.PortStart != 0 {
+			cmd.Kill()
 			address := util.GetURL("localhost", int(p.PortStart))
 			if p.healthChecker.WaitForRunning(address, p.Name, probeStopCh) {
 				p.lock.Lock()
 				p.State = StateRunning
+				logrus.Debug("Ready to update process.")
+				cmd.UpdateProcess()
 				p.lock.Unlock()
 				p.UpdateCh <- p
 				return

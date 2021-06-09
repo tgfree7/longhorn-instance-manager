@@ -11,6 +11,8 @@ service ProcessManagerService {
 	rpc ProcessWatch(google.protobuf.Empty) returns (stream ProcessResponse) {}
 	rpc ProcessReplace(ProcessReplaceRequest) returns (ProcessResponse) {}
 
+	rpc GetInterfaceIP(Interface) returns (DataIP) {}
+
 	rpc VersionGet(google.protobuf.Empty) returns(VersionResponse);
 }
 
@@ -74,4 +76,12 @@ message VersionResponse {
 
     int64 instanceManagerAPIVersion = 4;
     int64 instanceManagerAPIMinVersion = 5;
+}
+
+message Interface {
+	string interface = 1;
+}
+
+message DataIP {
+	string dataIP = 1;
 }
